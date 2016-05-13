@@ -8,9 +8,10 @@ use micro\utils\RequestUtils;
  * @package cloud.controllers
  */
 abstract class BaseController extends Controller {
+
 	public function initialize(){
 		if(!RequestUtils::isAjax()){
-			$this->loadView("main/vHeader.html",array("infoUser"=>Auth::getInfoUser()));
+			$this->loadView("main/vHeader.html", array("infoUser"=>Auth::getInfoUser()));
 		}
 	}
 
